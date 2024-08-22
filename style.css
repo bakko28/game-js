@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    height: 90%;
+    width: 100%;
+    border:  2px red solid;
+}
+
+header {
+    margin-bottom: 16px;
+    height: 10%;
+    width: 100%;
+    border: 2px green solid;
+}
+
+main .person__info {
+    z-index: 4;
+    position: absolute;
+    left: 43%;
+    bottom: 8px;
+    height: 21%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    width: 300px;
+    height: 140px;
+    background-color: #000;
+}
+
+main .person__info .person_img {
+    background-color: #fff;
+    padding: 16px;
+    height: 120px;
+    width: 130px;
+    overflow: hidden;
+    border-top-left-radius: 24px;
+    margin-right: 16px;
+}
+
+main .person__info .person_img img{
+    width: 100px;
+}
+
+main .person__info .person_text_info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    height: 100%;
+    /* border: 2px red solid; */
+}
+
+main .person__info .person_text_info .person_username {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+main .person__info .person_text_info .person_health_bar {
+    /* border: 2px green solid; */
+    width: 100%;
+    height: 24%;
+}
+
+main .person__info .person_text_info .person_health_bar .health_point {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    height: 32%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #1c1c1c;
+    margin: 4px 0px;
+}
+
+main .person__info .person_text_info .person_health_bar .health_point::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: red;
+    height: 100%;
+    width: 80%;
+}
+
+main .person__info .person_text_info .person_health_bar .shield_point {
+    z-index: 3;
+    position: relative;
+    width: 150px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 32%;
+    background-color: #1c1c1c;
+    margin: 4px 0px;
+}
+
+main .person__info .person_text_info .person_health_bar .shield_point::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: yellow;
+    height: 100%;
+    width: 95%;
+}
+
+main .game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    border: 2px blue solid;
+}
+
+.person {
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.items {
+    display: flex;
+}
+
+.item {
+    cursor: pointer;
+    padding: 8px;
+    border: 2px red solid;
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item .burger_menu {
+    display: none;
+    width: 100%;
+    margin-top: 4px;
+    flex-direction: column;
+}
+
+.item .burger_menu button {
+    cursor: pointer;
+    margin-bottom: 1px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
